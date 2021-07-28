@@ -10,7 +10,7 @@ body{
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  background:#262626;
+  background: #000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,6 +23,7 @@ body{
   font-size: 50px;
   display: flex;
   overflow: hidden;
+  animation: neon 4s ease-in-out infinite;
 }
 
 .fa-instagram,.fa-facebook,.fa-telegram,.fa-youtube,.fa-github,.fa-js{
@@ -38,7 +39,8 @@ body{
   box-shadow: 0 0 5px rgb(30, 144, 255), 
   0 0 25px rgb(30, 144, 255), 
   0 0 50px rgb(30, 144, 255), 
-  0 0 200px rgb(30, 144, 255); 
+  0 0 200px rgb(30, 144, 255), 
+  0 0 500px rgb(30, 144, 255); 
   width: 80px;
   height: 80px;
   padding: 5px;
@@ -52,13 +54,21 @@ body{
   box-shadow: 0 0 5px rgb(30, 144, 255), 
   0 0 25px rgb(30, 144, 255), 
   0 0 50px rgb(30, 144, 255), 
-  0 0 200px rgb(30, 144, 255); 
+  0 0 200px rgb(30, 144, 255), 
+  0 0 500px rgb(30, 144, 255), 
+  0 0 1000px rgb(30, 144, 255); 
   width: 80px;
   height: 80px;
   padding: 5px;
   padding-left: 19px;
   border-radius: 50%;
   padding-top: 15px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
+@keyframes neon {
+  50%{
+    opacity: 1;
+    filter: hue-rotate(300deg);
+  }
+}
