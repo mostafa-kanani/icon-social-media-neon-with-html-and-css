@@ -1,105 +1,64 @@
-* {
+*{
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background:#E0E0E0; 
+body{
+  font-family: sans-serif; 
   font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background:#262626;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 }
 
-:root{
-    --gray-color:#555; 
-}
-
-.text{
-    text-align: center;
-    align-items: center;
-    margin: 30px;
-    letter-spacing: 5px;
-    font-family: sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    color: var(--gray-color);
-    text-transform: capitalize;
-}
-
-.icon {
-  margin: 10px;
-  color: #fff;
+.neon-social-media{
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
   font-size: 50px;
-  overflow: hidden;
   display: flex;
-  flex-direction: row;
-  border-bottom: 10px solid #555;
-  border-right: 10px solid rgb(123, 104, 238);
-  border-top: 10px solid rgb(153, 50, 204);
-  border-left: 10px solid rgb(255, 69, 0); 
+  overflow: hidden;
+}
+
+.fa-instagram,.fa-facebook,.fa-telegram,.fa-youtube,.fa-github,.fa-js{
+  margin: 100px;
   border-radius: 40px;
-  animation: icon 4s ease-in-out infinite;
-}
-
-.fa-instagram,
-.fa-facebook,
-.fa-github,
-.fa-telegram {
-  margin: 40px;
   cursor: pointer;
-  outline: none;
-  background: darkslategrey;
-  width: 90px;
-  padding-left: 20px;
-  height: 90px;
-  padding: 21px;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+  color: #fff;
+}
+
+.fa-instagram:nth-child(2):hover{
+  box-shadow: 0 0 5px rgb(30, 144, 255), 
+  0 0 25px rgb(30, 144, 255), 
+  0 0 50px rgb(30, 144, 255), 
+  0 0 200px rgb(30, 144, 255); 
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  padding-left: 19px;
   border-radius: 50%;
+  padding-top: 15px;
   transition: all 0.4s ease-in-out;
 }
 
-.fa-instagram:hover {
+.fa-github:nth-child(4):hover{
+  box-shadow: 0 0 5px rgb(30, 144, 255), 
+  0 0 25px rgb(30, 144, 255), 
+  0 0 50px rgb(30, 144, 255), 
+  0 0 200px rgb(30, 144, 255); 
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  padding-left: 19px;
+  border-radius: 50%;
+  padding-top: 15px;
   transition: all 0.4s ease-in-out;
-  margin-top: -1px;
-}
-
-.fa-facebook:hover {
-  transition: all 0.4s ease-in-out;
-  margin-top: -1px;
-}
-
-.fa-telegram:hover {
-  transition: all 0.4s ease-in-out;
-  margin-top: -1px;
-}
-
-.fa-github:hover {
-  transition: all 0.4s ease-in-out;
-  margin-top: -1px;
-}
-
-@media screen and (max-width: 500px) {
-  .icon {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .icon {
-    flex-direction: column;
-  }
-}
-
-@keyframes icon {
-    0%{
-        opacity: 1;
-    }
-
-    50%{
-        filter: hue-rotate(250deg);
-    }
 }
 
